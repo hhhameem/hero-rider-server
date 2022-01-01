@@ -60,8 +60,8 @@ async function run() {
       let result;
       if (pageNumber) {
         result = await cursor
-          .skip(pageNumber * 1)
-          .limit(1)
+          .skip(pageNumber * 10)
+          .limit(10)
           .toArray();
       } else {
         result = await cursor.toArray();
